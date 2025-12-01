@@ -1,0 +1,55 @@
+{
+  "name": "whatsapp-clone-pro",
+  "version": "1.0.0",
+  "description": "Production-ready WhatsApp clone with real-time messaging, contact sync, and WebSocket support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/backend & npm run dev --workspace=apps/web",
+    "build": "npm run build --workspace=packages/backend && npm run build --workspace=apps/web",
+    "start": "npm run start --workspace=packages/backend",
+    "test": "npm run test --workspaces",
+    "test:integration": "npm run test:integration --workspaces",
+    "test:e2e": "npm run test:e2e --workspaces",
+    "test:coverage": "npm run test:coverage --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "npm run format --workspaces",
+    "install-all": "npm install && npm install --workspace=packages/backend && npm install --workspace=apps/web && npm install --workspace=packages/shared"
+  },
+  "workspaces": [
+    "packages/backend",
+    "packages/shared",
+    "packages/crypto",
+    "apps/web",
+    "apps/mobile",
+    "apps/desktop"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arpancodez/whatsapp-clone-pro"
+  },
+  "keywords": [
+    "whatsapp",
+    "messaging",
+    "chat",
+    "realtime",
+    "websocket",
+    "react",
+    "typescript",
+    "node",
+    "postgresql"
+  ],
+  "author": "Arpan",
+  "license": "MIT"
+}
