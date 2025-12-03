@@ -79,7 +79,7 @@ app.use((err: any, req: Request, res: Response) => {
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
-  console.log(`✓ WhatsApp Clone Backend running on port ${PORT}`);
+  console.log(`WhatsApp Clone Backend running on port ${PORT}`);
 });
 
 export { app, server, io };
