@@ -37,7 +37,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 10000,
+  windowMs: 15 * 60 * 1000,
   max: 100
 });
 app.use('/api/', limiter);
