@@ -47,7 +47,7 @@ app.get('/health', (req: Request, res: Response) => {
 });
 
 app.get('/api/v1/status', (req: Request, res: Response) => {
-  res.json({ status: 'API is running', version: '1.0.0' });
+  res.json({ status: 'API is up running', version: '1.0.0' });
 });
 
 io.on('connection', (socket) => {
