@@ -51,7 +51,7 @@ app.get('/api/v1/status', (req: Request, res: Response) => {
 });
 
 io.on('connection', (socket) => {
-  logger.info(`User connected: ${socket.id}`);
+  logger.info(`User is connected: ${socket.id}`);
 
   socket.on('user:online', (userId: string) => {
     socket.broadcast.emit('user:online', userId);
